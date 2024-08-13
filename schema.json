@@ -4,12 +4,14 @@
   "properties": {
     "readme": {
       "type": "string",
-      "title": "Model: Flux.1 Dev | Loras: XLabsAI Realism, Advokat Aesthetic",
-      "author": "Black Forest Labs: Andreas Blattmann, Andrew Holmes, Axel Sauer, Dominik Lorenz, Dustin Podell, Frederic Boesel, Harry Saini, Jonas Müller, Kyle Lacey, Patrick Esser, Robin Rombach, Sumith Kulal, Tim Dockhorn, Yam Levi, Zion English",
-      "page": "https://blackforestlabs.ai/",
-      "code": "https://github.com/black-forest-labs/flux",
+      "title": "LLaVA-OneVision: Easy Visual Task Transfer",
+      "author": "Bo Li, Yuanhan Zhang, Dong Guo, Renrui Zhang, Feng Li, Hao Zhang, Kaichen Zhang, Yanwei Li, Ziwei Liu, Chunyuan Li",
+      "page": "https://llava-vl.github.io/blog/2024-08-05-llava-onevision/",
+      "paper": "https://arxiv.org/abs/2408.03326",
+      "code": "https://github.com/LLaVA-VL/LLaVA-NeXT",
+      "jupyter": "https://github.com/camenduru/LLaVA-OneVision-jupyter",
       "tags": [
-        "Text to Image"
+        "Vision to Image"
       ],
       "widget": "readme"
     },
