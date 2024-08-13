@@ -1,0 +1,303 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "object",
+  "properties": {
+    "readme": {
+      "type": "string",
+      "title": "Model: Flux.1 Dev | Loras: XLabsAI Realism, Advokat Aesthetic",
+      "author": "Black Forest Labs: Andreas Blattmann, Andrew Holmes, Axel Sauer, Dominik Lorenz, Dustin Podell, Frederic Boesel, Harry Saini, Jonas Müller, Kyle Lacey, Patrick Esser, Robin Rombach, Sumith Kulal, Tim Dockhorn, Yam Levi, Zion English",
+      "page": "https://blackforestlabs.ai/",
+      "code": "https://github.com/black-forest-labs/flux",
+      "tags": [
+        "Text to Image"
+      ],
+      "widget": "readme"
+    },
+    "input_image_check": {
+      "type": "string",
+      "description": "Input Image URL",
+      "widget": "textarea"
+    },
+    "final_width": {
+      "type": "integer",
+      "description": "Final Width"
+    },
+    "tag_prompt": {
+      "type": "string",
+      "description": "Tag Prompt",
+      "widget": "textarea"
+    },
+    "additional_prompt": {
+      "type": "string",
+      "description": "Additional Prompt",
+      "widget": "textarea"
+    },
+    "tag_seed": {
+      "type": "integer",
+      "description": "Tag Seed (if 0 random)"
+    },
+    "tag_temp": {
+      "type": "number",
+      "description": "Tag Temp"
+    },
+    "tag_max_tokens": {
+      "type": "integer",
+      "description": "Tag Max Tokens",
+      "widget": "textarea"
+    },
+    "seed": {
+      "type": "integer",
+      "description": "Seed (if 0 random)"
+    },
+    "steps": {
+      "type": "integer",
+      "widget": "select",
+      "description": "Steps",
+      "oneOf": [
+        {
+          "description": "10",
+          "enum": [
+            10
+          ]
+        },
+        {
+          "description": "20",
+          "enum": [
+            20
+          ]
+        },
+        {
+          "description": "30",
+          "enum": [
+            30
+          ]
+        }
+      ],
+      "default": 20
+    },
+    "guidance": {
+      "type": "number",
+      "description": "Guidance"
+    },
+    "lora_file": {
+      "type": "string",
+      "widget": "select",
+      "description": "Lora File",
+      "oneOf": [
+        {
+          "description": "Advokat Aesthetic",
+          "enum": [
+            "advokat_aesthetic10k.safetensors"
+          ]
+        },
+        {
+          "description": "XLabs Anime",
+          "enum": [
+            "xlabs_anime.safetensors"
+          ]
+        },
+        {
+          "description": "XLabs Art",
+          "enum": [
+            "xlabs_art.safetensors"
+          ]
+        },
+        {
+          "description": "XLabs Disney",
+          "enum": [
+            "xlabs_disney.safetensors"
+          ]
+        },
+        {
+          "description": "XLabs MJv6",
+          "enum": [
+            "xlabs_mjv6.safetensors"
+          ]
+        },
+        {
+          "description": "XLabs Realism",
+          "enum": [
+            "xlabs_realism.safetensors"
+          ]
+        },
+        {
+          "description": "XLabs Scenery",
+          "enum": [
+            "xlabs_scenery.safetensors"
+          ]
+        },
+        {
+          "description": "Araminta_k Frostinglane",
+          "enum": [
+            "alvdansen_frostinglane_araminta_k.safetensors"
+          ]
+        }
+      ],
+      "default": "xlabs_realism.safetensors"
+    },
+    "lora_strength_model": {
+      "type": "number",
+      "widget": "select",
+      "description": "Lora Strength Model",
+      "oneOf": [
+        {
+          "description": "0",
+          "enum": [
+            0
+          ]
+        },
+        {
+          "description": "0.5",
+          "enum": [
+            0.5
+          ]
+        },
+        {
+          "description": "1",
+          "enum": [
+            1
+          ]
+        }
+      ],
+      "default": 1
+    },
+    "lora_strength_clip": {
+      "type": "number",
+      "widget": "select",
+      "description": "Lora Strength Clip",
+      "oneOf": [
+        {
+          "description": "0",
+          "enum": [
+            0
+          ]
+        },
+        {
+          "description": "0.5",
+          "enum": [
+            0.5
+          ]
+        },
+        {
+          "description": "1",
+          "enum": [
+            1
+          ]
+        }
+      ],
+      "default": 1
+    },
+    "sampler_name": {
+      "type": "string",
+      "widget": "select",
+      "description": "Sampler Name",
+      "oneOf": [
+        {
+          "description": "euler",
+          "enum": [
+            "euler"
+          ]
+        },
+        {
+          "description": "heun",
+          "enum": [
+            "heun"
+          ]
+        },
+        {
+          "description": "heunpp2",
+          "enum": [
+            "heunpp2"
+          ]
+        },
+        {
+          "description": "dpm_2",
+          "enum": [
+            "dpm_2"
+          ]
+        },
+        {
+          "description": "lms",
+          "enum": [
+            "lms"
+          ]
+        },
+        {
+          "description": "dpmpp_2m",
+          "enum": [
+            "dpmpp_2m"
+          ]
+        },
+        {
+          "description": "ipndm",
+          "enum": [
+            "ipndm"
+          ]
+        },
+        {
+          "description": "deis",
+          "enum": [
+            "deis"
+          ]
+        },
+        {
+          "description": "ddim",
+          "enum": [
+            "ddim"
+          ]
+        },
+        {
+          "description": "uni_pc",
+          "enum": [
+            "uni_pc"
+          ]
+        },
+        {
+          "description": "uni_pc_bh2",
+          "enum": [
+            "uni_pc_bh2"
+          ]
+        }
+      ],
+      "default": "euler"
+    },
+    "scheduler": {
+      "type": "string",
+      "widget": "select",
+      "description": "Scheduler",
+      "oneOf": [
+        {
+          "description": "normal",
+          "enum": [
+            "normal"
+          ]
+        },
+        {
+          "description": "sgm_uniform",
+          "enum": [
+            "sgm_uniform"
+          ]
+        },
+        {
+          "description": "simple",
+          "enum": [
+            "simple"
+          ]
+        },
+        {
+          "description": "ddim_uniform",
+          "enum": [
+            "ddim_uniform"
+          ]
+        }
+      ],
+      "default": "simple"
+    }
+  },
+  "buttons": [
+    {
+      "id": "enter",
+      "label": "🥪 Enter"
+    }
+  ]
+}
