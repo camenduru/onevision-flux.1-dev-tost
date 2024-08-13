@@ -14,7 +14,6 @@ from nodes import load_custom_node
 from comfy_extras import nodes_custom_sampler
 from comfy_extras import nodes_flux
 from comfy import model_management
-import gradio as gr
 
 load_custom_node("/content/ComfyUI/custom_nodes/ComfyUI-LLaVA-OneVision")
 DualCLIPLoader = NODE_CLASS_MAPPINGS["DualCLIPLoader"]()
