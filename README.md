@@ -18,5 +18,7 @@ https://llava-vl.github.io/blog/2024-08-05-llava-onevision/
 
 ### 🖼 Output
 
+https://github.com/user-attachments/assets/30dedbdf-7b57-459a-acb5-89d1ebe45c19
+
 ### 🏢 Sponsor
 https://runpod.io
