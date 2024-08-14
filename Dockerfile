@@ -13,8 +13,8 @@ RUN adduser --disabled-password --gecos '' camenduru && \
 
 USER camenduru
 
-RUN pip install -q opencv-python imageio imageio-ffmpeg ffmpeg-python av runpod \
-    xformers==0.0.25 torchsde==0.2.6 einops==0.8.0 diffusers==0.28.0 transformers==4.41.2 accelerate==0.30.1 && \
+RUN pip install -q opencv-python==4.10.0.84 imageio==2.35.0 imageio-ffmpeg==0.5.1 ffmpeg-python==0.2.0 av==12.3.0 runpod==1.7.0 \
+    xformers==0.0.25 open_clip_torch==2.26.1 torchsde==0.2.6 einops==0.8.0 diffusers==0.30.0 transformers==4.44.0 accelerate==0.33.0 && \
     git clone https://github.com/comfyanonymous/ComfyUI /content/ComfyUI && \
     git clone -b tost https://github.com/camenduru/ComfyUI-LLaVA-OneVision /content/ComfyUI/custom_nodes/ComfyUI-LLaVA-OneVision && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft -d /content/ComfyUI/models/unet -o flux1-dev.sft && \
