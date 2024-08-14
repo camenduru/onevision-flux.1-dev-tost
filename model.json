@@ -1,5 +1,5 @@
 {
-    "input_image_check": "https://i.ibb.co/PcXLFrj/yyoaah.jpg",
+    "input_image_check": "https://i.ibb.co/QX3NcGb/cat.jpg",
     "final_width": 1024,
     "tag_prompt": "Describe the image, person and text in detail, using the format of a text-to-image prompt.",
     "additional_prompt": "ultra realistic",
