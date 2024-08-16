@@ -144,20 +144,26 @@ def generate(input):
         )
         response.raise_for_status()
     except Exception as e:
-        return {"result": f"FAILED: {e}"}
+        return {"jobId": job_id, "result": f"FAILED: {e}", "status": "FAILED"}
     finally:
         if os.path.exists(result):
             os.remove(result)
 
     if response and response.status_code == 200:
         try:
-            payload = {"jobId": job_id, "result": response.json()['attachments'][0]['url']}
+            payload = {"jobId": job_id, "result": response.json()['attachments'][0]['url'], "status": "DONE"}
             requests.post(f"{notify_uri}", data=json.dumps(payload), headers={'Content-Type': 'application/json', "Authorization": f"{notify_token}"})
         except Exception as e:
-            return {"result": f"FAILED: {e}"}
+            return {"jobId": job_id, "result": f"FAILED: {e}", "status": "FAILED"}
         finally:
-            return {"result": response.json()['attachments'][0]['url']}
+            return {"jobId": job_id, "result": response.json()['attachments'][0]['url'], "status": "DONE"}
     else:
-        return {"result": "FAILED: 200"}
+        try:
+            payload = {"jobId": job_id, "status": "FAILED"}
+            requests.post(f"{notify_uri}", data=json.dumps(payload), headers={'Content-Type': 'application/json', "Authorization": f"{notify_token}"})
+        except Exception as e:
+            return {"jobId": job_id, "result": f"FAILED: {e}", "status": "FAILED"}
+        finally:
+            return {"jobId": job_id, "result": f"FAILED", "status": "FAILED"}
 
 runpod.serverless.start({"handler": generate})
