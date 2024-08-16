@@ -120,8 +120,12 @@ def generate(input):
             notify_token = os.getenv('com_camenduru_notify_token')
         discord_id = values['discord_id']
         del values['discord_id']
-        discord_channel = values['discord_channel']     
+        if(discord_id != "discord_id"):
+            discord_id = os.getenv('com_camenduru_discord_id')
+        discord_channel = values['discord_channel']
         del values['discord_channel']
+        if(discord_channel != "discord_channel"):
+            discord_channel = os.getenv('com_camenduru_discord_channel')
         discord_token = values['discord_token']
         del values['discord_token']
         if(discord_token != "discord_token"):
@@ -154,6 +158,6 @@ def generate(input):
         finally:
             return {"result": response.json()['attachments'][0]['url']}
     else:
-        return {"result": "FAILED"}
+        return {"result": "FAILED: 200"}
 
 runpod.serverless.start({"handler": generate})
