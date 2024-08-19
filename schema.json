@@ -10,6 +10,7 @@
       "paper": "https://arxiv.org/abs/2408.03326",
       "code": "https://github.com/LLaVA-VL/LLaVA-NeXT",
       "jupyter": "https://github.com/camenduru/LLaVA-OneVision-jupyter",
+      "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/onevision-flux.1-dev.ipynb",
       "tags": [
         "Vision to Image"
       ],
