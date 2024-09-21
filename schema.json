@@ -295,6 +295,14 @@
         }
       ],
       "default": "simple"
+    },
+    "example": {
+      "type": "string",
+      "image1": "https://fakeimg.pl/921x1630/282828/eae0d0/?text=input#.png",
+      "image2": "https://files.catbox.moe/m56u7o.png",
+      "image3": "https://fakeimg.pl/921x1630/282828/eae0d0/?text=output#.png",
+      "image4": "https://files.catbox.moe/09jufi.png",
+      "widget": "example"
     }
   },
   "buttons": [
